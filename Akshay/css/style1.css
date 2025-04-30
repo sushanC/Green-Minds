@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3f9f1;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #4caf50;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #dcedc8;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #444;
+  }
+  
+  .start-btn {
+    background: #43a047;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .start-btn:hover {
+    background: #2e7d32;
+  }
+  
+  .about, .contact {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .about h2, .contact h2 {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about p, .contact p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background: #f1f8e9;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 50px;
+  }
+  
+  

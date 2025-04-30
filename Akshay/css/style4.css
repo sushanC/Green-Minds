@@ -1,0 +1,53 @@
+/* General page style */
+body {
+    background-color: #f0fff0; /* very light green */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #2e7d32; /* dark green */
+}
+
+/* Heading style */
+.head {
+    text-align: center;
+    font-size: 3em;
+    color: #2e7d32;
+    margin-bottom: 30px;
+}
+
+/* Link container styling */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Link style */
+a {
+    text-decoration: none;
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for links */
+a:hover {
+    background-color: #66bb6a; /* lighter green */
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .head {
+        font-size: 2em;
+    }
+
+    a {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
