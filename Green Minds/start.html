@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Minds - Mental Health Test</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style3.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🌿 Green Minds</div>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div id="question-container">
+    <h2 id="question-text">Click start to begin the test!</h2>
+    <div id="options"></div>
+    <button id="next-btn" onclick="nextQuestion()">Start</button>
+  </div>
+</main>
+<script>
+    const questions = [
+      {
+        text: "How would you describe your mental health?",
+        options: ["Good", "Fair", "Poor"]
+      },
+      {
+        text: "How often do you feel stressed due to farming challenges?",
+        options: ["Rarely", "Sometimes", "Often", "Always"]
+      },
+      {
+        text: "Do you find time to relax during your workday?",
+        options: ["Yes", "No"]
+      },
+      {
+        text: "What are your main sources of stress? (Select all that apply)",
+        options: ["Financial challenges", "Crop/Livestock issues", "Climate/weather problems", "Market prices", "Family responsibilities"]
+      }
+    ];
+  
+    let currentQuestionIndex = -1;
+  
+    function nextQuestion() {
+      currentQuestionIndex++;
+      const questionText = document.getElementById("question-text");
+      const optionsDiv = document.getElementById("options");
+      const nextBtn = document.getElementById("next-btn");
+  
+      // End of questions
+      if (currentQuestionIndex >= questions.length) {
+        questionText.textContent = "Thank you for completing the test!";
+        optionsDiv.innerHTML = "";
+        nextBtn.style.display = "none";
+        return;
+      }
+  
+      const current = questions[currentQuestionIndex];
+      questionText.textContent = current.text;
+      optionsDiv.innerHTML = "";
+  
+      current.options.forEach(option => {
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+  
+        // Use checkbox for multi-select questions, radio for others
+        if (current.text.includes("Select all")) {
+          input.type = "checkbox";
+        } else {
+          input.type = "radio";
+          input.name = "answer";
+        }
+  
+        input.value = option;
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(" " + option));
+        optionsDiv.appendChild(label);
+      });
+  
+      nextBtn.textContent = currentQuestionIndex === questions.length - 1 ? "Finish" : "Next";
+    }
+  </script>
+  <button class="btn">
+    <a href="./farmer.html">HEALING HARVEST</a>
+  </button>
+   
+<footer>
+  <p>&copy; 2025 Green Minds. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>
