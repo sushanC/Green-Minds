@@ -9,10 +9,8 @@ const questions = [
     "Moving or speaking so slowly that other people could have noticed? Or being so fidgety or restless that you were moving a lot more than usual?",
     "Thoughts that you would be better off dead or of hurting yourself in some way?"
   ];
-
   const options = ["0 - Not at all", "1 - Several days", "2 - More than half the days", "3 - Nearly every day"];
   const questionsDiv = document.getElementById('questions');
-
   questions.forEach((q, i) => {
     const div = document.createElement('div');
     div.classList.add('question');
@@ -34,7 +32,6 @@ const questions = [
       const val = document.querySelector(`input[name="q${i}"]:checked`).value;
       score += parseInt(val);
     }
-
     let feedback = "";
     if (score <= 4) feedback = "Minimal or no depression.";
     else if (score <= 9) feedback = "Mild depression.";
